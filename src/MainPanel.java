@@ -15,6 +15,8 @@ public class MainPanel extends JPanel implements ActionListener{
     private JLabel outputLabel;
     private JPasswordField passwordField;
     private String password = "";
+    private String cmd = "";
+    private String OK = "ok";
     
     MainPanel(){
         GridLayout grid = new GridLayout(1,4);
@@ -32,6 +34,7 @@ public class MainPanel extends JPanel implements ActionListener{
 
         passwordField = new JPasswordField(30);
         passwordField.setEchoChar('*');
+        passwordField.setActionCommand(OK);
         passwordField.addActionListener(this);
         add(passwordField);
         
